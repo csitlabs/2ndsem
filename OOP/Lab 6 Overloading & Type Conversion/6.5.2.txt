@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Time {
+	int hrs, mins;
+public:
+	Time(int, int);
+	operator int();
+};
+Time::Time(int a, int b) {
+	hrs = a;
+	mins = b;
+}
+Time::operator int() {
+	return (hrs * 60 + mins);
+}
+void TypeConversion(int hour, int mins) {
+	int duration;
+	Time t(hour, mins);
+	duration = t;
+	cout << "Total Minutes: " << duration << endl;
+}
+
+int main() {
+	int hour, mins;
+	cout<< "Enter hours & minutes: ";;
+	cin >> hour >> mins;
+	TypeConversion(hour, mins);
+	return 0;
+}

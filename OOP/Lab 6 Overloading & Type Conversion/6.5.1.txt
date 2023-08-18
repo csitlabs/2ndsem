@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+class dist {
+    int length;
+    public:
+    dist (int n) {
+        length = n;
+    }
+    operator int () {
+        return length;
+    }
+};
+
+int main () {
+    dist d(12);
+    int len = d;
+    int hei = (int) d;
+    cout << hei;
+    return 0;
+}
